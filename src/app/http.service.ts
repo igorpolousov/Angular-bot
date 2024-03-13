@@ -12,9 +12,10 @@ export class HttpService{
         const myHeaders = new HttpHeaders().set(
             'Content-Type','application/json;charset=utf-8'
         );
-           
+        //const URL = "http://89.111.141.36:3000/web-data"
+        const URL= 'http://localhost:3000/web-data'
         const body = {name: order.name, age: order.totalSumm};
         const headers = {'Content-Type': 'application/json;charset=utf-8'}
-        return this.http.post("http://89.111.141.36:3000/web-data", body); 
+        return this.http.post(URL, body); 
     }
 }
