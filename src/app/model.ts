@@ -1,3 +1,3 @@
 export class Order {
-    constructor(public name:string, public totalSumm:number){}
+    constructor(public name:string, public totalSumm:string){}
 }
