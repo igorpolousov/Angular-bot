@@ -16,7 +16,7 @@ import { Order } from "./model";
 
 export class HomeComponent {
 
-  order: Order=new Order("","");
+  order: Order=new Order("", 0);
 
   receivedOrder: Order | undefined;
 
