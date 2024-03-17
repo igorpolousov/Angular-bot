@@ -12,10 +12,12 @@ export class HttpService{
         const myHeaders = new HttpHeaders().set(
             'Content-Type','application/json;charset=utf-8'
         );
-        const URL = "http://89.111.141.36:80/web-data"
-        //const URL= 'http://localhost:3000/web-data'
+
+        const options = {headers: myHeaders}
+        //const URL = "http://89.111.141.36:80/web-data"
+        const URL= 'http://localhost:80/web-data'
         const body = {name: order.name, totalSum: order.totalSum};
-        const headers = {'Content-Type': 'application/json;charset=utf-8'}
-        return this.http.post(URL, body); 
+
+        return this.http.post(URL, body, options); 
     }
 }
