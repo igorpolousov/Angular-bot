@@ -12,6 +12,12 @@
   <script>
    const initData = window.Telegram.WebApp.initData
    alert(`${initData}`)
+
+   fetch(
+		"http://localhost:80/validate-init",
+		{ method: "POST", body: initData },
+	).then(res => res.json());
+
   </script>
   <app-root></app-root>
 </body>
